@@ -2,23 +2,39 @@
 
 vector<int> ninjaAndSortedArrays(vector<int>& arr1, vector<int>& arr2, int m, int n) {
 	// Write your code here.
-	vector<int> res;
-	for(int i=0; i<arr1.size();i++){
-			if(arr1[i]==0){
-				continue;
-			}
-		res.push_back(arr1[i]);
+
+	int i=m-1, j=n-1, k=m+n-1;
+	while (k >= 0) {
+		if (j < 0 || (i >= 0 && arr1[i] > arr2[j])) {
+			arr1[k] = arr1[i];
+			i--;
+		} else {
+			arr1[k] = arr2[j];
+			j--;
+		}
+	k--;
 	}
 
-		for(int i=0; i<arr2.size();i++){
-			if(arr2[i]==0){
-				continue;
-			}
-		res.push_back(arr2[i]);
-	}
+	return arr1;
 
-	sort(res.begin(), res.end());
-	return res;
+	
+	// vector<int> res;
+	// for(int i=0; i<arr1.size();i++){
+	// 		if(arr1[i]==0){
+	// 			continue;
+	// 		}
+	// 	res.push_back(arr1[i]);
+	// }
+
+	// 	for(int i=0; i<arr2.size();i++){
+	// 		if(arr2[i]==0){
+	// 			continue;
+	// 		}
+	// 	res.push_back(arr2[i]);
+	// }
+
+	// sort(res.begin(), res.end());
+	// return res;
 
 
 //  	int i = 0;
