@@ -1,6 +1,5 @@
 int longestSubSeg(vector<int> &arr , int n, int k){
     // Write your code here.
-    int i=0;//just move
     int j=0;//unflip when req
     int flip=0;
     int res=0;
