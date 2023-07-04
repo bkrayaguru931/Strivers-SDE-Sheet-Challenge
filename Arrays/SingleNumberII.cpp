@@ -12,6 +12,7 @@ public:
         // }
         // return -1;
 
+        
         int a = 0,b = 0;
         for(auto x:nums){
             a=(a^x) & ~b;
