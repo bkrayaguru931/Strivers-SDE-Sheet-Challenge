@@ -1,6 +1,12 @@
 #include <bits/stdc++.h> 
 bool areAnagram(string &str1, string &str2){
     // Write your code here.
+    // sort(str1.begin(),str1.end());
+    // sort(str2.begin(),str2.end());
+    // if(str1==str2)
+    //     return true;
+    // else
+    //     return false;  //🥴
     int s1=str1.length();
     int s2=str2.length();
      vector<int> v(26,0);
